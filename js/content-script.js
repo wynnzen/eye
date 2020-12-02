@@ -3,11 +3,11 @@
 
 function bodyFullFadeInColor() {
 	//淡入效果
-	if ($('#mask')) {
-		var maskObj = $('#mask');
+	if (document.getElementById('mask') != null) {
+		var maskObj = document.getElementById('mask');
 		maskObj.setAttribute("style", "width: 100%; height:100%; position: fixed !important; left: 0px !important; bottom: 0px !important; overflow: hidden !important; pointer-events: none !important; z-index: 99999; -webkit-transition: -webkit-transform 1s ease-in-out; display:none; ");
 		maskObj.style.background = "#CCE8CF";
-		maskObj.style.opacity = 0.382;
+		maskObj.style.opacity = 0.2;
 		$("#mask").fadeIn("slow");
 
 	}
@@ -16,7 +16,7 @@ function bodyFullFadeInColor() {
 		maskObj.id = "mask";
 		maskObj.setAttribute("style", "width: 100%; height:100%; position: fixed !important; left: 0px !important; bottom: 0px !important; overflow: hidden !important; pointer-events: none !important; z-index: 99999; -webkit-transition: -webkit-transform 1s ease-in-out; display:none; ");
 		maskObj.style.background = "#CCE8CF";
-		maskObj.style.opacity = 0.382;
+		maskObj.style.opacity = 0.2;
 		document.body.appendChild(maskObj);
 		$("#mask").fadeIn("slow");
 	}
@@ -31,6 +31,7 @@ function removeBodyFullFadeInColor() {
 		$("#mask").css({ opacity: 0 });
 	}
 }
+
 
 
 chrome.runtime.onMessage.addListener(function changeBg(request, sender, sendResponse) {
