@@ -8,7 +8,7 @@ function bodyFullFadeInColor() {
 		maskObj.setAttribute("style", "width: 100%; height:100%; position: fixed !important; left: 0px !important; bottom: 0px !important; overflow: hidden !important; pointer-events: none !important; z-index: 99999; -webkit-transition: -webkit-transform 1s ease-in-out; display:none; ");
 		maskObj.style.background = "#CCE8CF";
 		maskObj.style.opacity = 0.2;
-		$("#mask").fadeIn("slow");
+		$("#mask").fadeIn("fast");
 
 	}
 	else {
@@ -18,7 +18,7 @@ function bodyFullFadeInColor() {
 		maskObj.style.background = "#CCE8CF";
 		maskObj.style.opacity = 0.2;
 		document.body.appendChild(maskObj);
-		$("#mask").fadeIn("slow");
+		$("#mask").fadeIn("fast");
 	}
 
 
